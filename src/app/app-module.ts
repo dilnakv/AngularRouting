@@ -16,6 +16,7 @@ import { Popular } from './home/popular/popular';
 import { Services } from './home/services/services';
 import { Testimony } from './home/testimony/testimony';
 import { NotFound } from './not-found/not-found';
+import { CourseDetails } from './courses/course-details/course-details';
 
 const routes: Routes = [
   {path: '', component: Home},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path: 'About', component: About},
   {path: 'Contact', component: Contact},
   {path: 'Courses', component: Courses},
+  {path: 'Courses/Course/:id', component: CourseDetails},
   {path: '**', component: NotFound}
 ]
 
@@ -41,7 +43,8 @@ const routes: Routes = [
     Popular,
     Services,
     Testimony,
-    NotFound
+    NotFound,
+    CourseDetails
 ,  ],
   imports: [
     BrowserModule,
